@@ -80,11 +80,12 @@ export const getSession = (req: Request, res: Response) => {
    }
 }
 
-export const forgotPassword = () => {
+export const forgotPassword = async(res: Response) => {
      try {
+          await AuthModel.create()
           
-     } catch (err) {
-          
+     } catch (err : any) {
+          res.status(500).json({message: err.message})
      }
 }
 
