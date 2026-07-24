@@ -89,3 +89,5 @@ export const forgotPassword = async(res: Response) => {
      }
 }
 
+
+//export contant autpassword //
